@@ -18,7 +18,7 @@ app.use(fileUpload());
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
+    origin: ["https://ecommercewithmern.netlify.app","http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
