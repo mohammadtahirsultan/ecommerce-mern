@@ -6,19 +6,19 @@ import paymentRoutes from "./routes/payment.js";
 import { ErrorMiddlerware } from "./middlewares/Error.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import fileUpload from 'express-fileupload'
+import fileUpload from "express-fileupload";
 const app = express();
 
 // using Middlewares
 app.use(cookieParser());
 app.use(express.json());
 app.use(urlencoded({ extended: true }));
-app.use(fileUpload())
+app.use(fileUpload());
 // using Middlewares
 app.use(
   cors({
     credentials: true,
-    origin: "*",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
